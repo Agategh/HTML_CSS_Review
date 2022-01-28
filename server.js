@@ -15,7 +15,7 @@ const fs = require('fs') //allows you to read different files
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-app.get('/store', function(req, res) { // function takes request parameter and response parameter and does the rest of the stuff
+app.get('/store.html', function(req, res) { // function takes request parameter and response parameter and does the rest of the stuff
     fs.readFile('items.json', function(error) {
         if (error) {
             res.status(500).end()
